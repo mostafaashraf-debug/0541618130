@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شركة الحمد | شراء الأجهزة الكهربائية المستعملة - الرياض</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#0B1B34;
+    --navy:#122A50;
+    --navy-soft:#1E3A66;
+    --orange:#F2801E;
+    --orange-deep:#D96A0A;
+    --paper:#F6F2EA;
+    --paper-dim:#EDE7DA;
+    --ink:#171512;
+    --ink-soft:#5B564C;
+    --line:#DED5C2;
+    --whatsapp:#22C35E;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Tajawal', sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.brand{font-family:'Cairo', sans-serif;}
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--navy-deep);
+    border-bottom:3px solid var(--orange);
+  }
+  .header-in{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 24px; max-width:1120px; margin:0 auto;
+  }
+  .brand{color:#fff; font-size:22px; font-weight:800; display:flex; align-items:center; gap:10px;}
+  .brand .mark{
+    width:38px; height:38px; border-radius:9px;
+    background:var(--orange);
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; color:var(--navy-deep); font-weight:900;
+  }
+  .header-call{
+    display:flex; align-items:center; gap:8px;
+    background:var(--orange);
+    color:var(--navy-deep);
+    padding:10px 18px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:15px;
+    white-space:nowrap;
+  }
+  .header-call svg{width:18px; height:18px; flex-shrink:0;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-in{
+    max-width:720px; margin:0 auto; padding:64px 24px 8px;
+    text-align:center;
+  }
+  .hero-eyebrow{
+    display:inline-block;
+    color:var(--orange);
+    font-weight:700;
+    font-size:15px;
+    margin-bottom:14px;
+    letter-spacing:0;
+  }
+  .hero h1{
+    color:#fff;
+    font-size:clamp(30px, 4.4vw, 46px);
+    font-weight:800;
+    line-height:1.28;
+    max-width:18ch;
+    margin:0 auto;
+  }
+  .hero p.lead{
+    color:#C9D2E2;
+    font-size:18px;
+    margin:18px auto 0;
+    max-width:38ch;
+  }
+  .badges{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:10px;
+    margin-top:24px;
+  }
+  .badge{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.18);
+    color:#fff;
+    padding:9px 16px;
+    border-radius:10px;
+    font-size:14.5px;
+    font-weight:500;
+    display:flex; align-items:center; gap:8px;
+  }
+  .badge svg{width:16px; height:16px; color:var(--orange); flex-shrink:0;}
+  .hero-ctas{
+    display:flex; gap:14px; margin-top:30px; flex-wrap:wrap; justify-content:center;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:15px 26px;
+    border-radius:12px;
+    font-weight:700;
+    font-size:16px;
+    border:none;
+    cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn svg{width:20px; height:20px; flex-shrink:0;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-whatsapp{background:var(--whatsapp); color:#fff; box-shadow:0 10px 24px -8px rgba(34,195,94,0.55);}
+  .btn-call{background:var(--orange); color:var(--navy-deep); box-shadow:0 10px 24px -8px rgba(242,128,30,0.5);}
+
+  .hero-bottom-space{height:44px;}
+
+  /* ---------- Section shell ---------- */
+  section{padding:64px 0;}
+  .section-head{
+    text-align:center;
+    max-width:560px;
+    margin:0 auto 40px;
+  }
+  .section-head .tag{
+    color:var(--orange-deep);
+    font-weight:700;
+    font-size:14.5px;
+    margin-bottom:8px;
+    display:block;
+  }
+  .section-head h2{
+    font-size:clamp(24px, 3vw, 32px);
+    font-weight:800;
+    color:var(--navy-deep);
+  }
+  .section-head p{color:var(--ink-soft); margin-top:12px; font-size:16px;}
+
+  /* ---------- Appliances grid ---------- */
+  .appliances{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:16px;
+  }
+  .app-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:26px 14px;
+    text-align:center;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  .app-card:hover{border-color:var(--orange); transform:translateY(-3px);}
+  .app-card .ic{
+    width:56px; height:56px;
+    margin:0 auto 14px;
+    background:var(--paper-dim);
+    border-radius:14px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .app-card .ic svg{width:30px; height:30px; color:var(--navy);}
+  .app-card span{font-weight:700; font-size:15px; color:var(--navy-deep);}
+
+  @media (max-width: 860px){
+    .appliances{grid-template-columns:repeat(3, 1fr);}
+  }
+  @media (max-width: 480px){
+    .appliances{grid-template-columns:repeat(2, 1fr);}
+  }
+
+  /* ---------- Features ---------- */
+  .features-band{background:var(--navy-deep);}
+  .features-band .section-head h2{color:#fff;}
+  .features-band .section-head p{color:#B9C2D4;}
+  .features-band .section-head .tag{color:var(--orange);}
+  .features{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;
+  }
+  .feat-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:18px;
+    padding:30px 24px;
+  }
+  .feat-card .ic{
+    width:52px; height:52px;
+    border-radius:12px;
+    background:var(--orange);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:18px;
+  }
+  .feat-card .ic svg{width:26px; height:26px; color:var(--navy-deep);}
+  .feat-card h3{color:#fff; font-size:19px; margin-bottom:8px;}
+  .feat-card p{color:#B9C2D4; font-size:15px;}
+
+  @media (max-width: 860px){
+    .features{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Steps ---------- */
+  .steps{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:0;
+    position:relative;
+    counter-reset:step;
+  }
+  .step{
+    position:relative;
+    padding:0 20px;
+    text-align:center;
+  }
+  .step .num{
+    width:46px; height:46px;
+    border-radius:50%;
+    background:var(--navy-deep);
+    color:var(--orange);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Cairo', sans-serif;
+    font-weight:800;
+    font-size:19px;
+    margin:0 auto 18px;
+  }
+  .step h3{font-size:17.5px; color:var(--navy-deep); margin-bottom:8px;}
+  .step p{color:var(--ink-soft); font-size:15px; max-width:26ch; margin:0 auto;}
+  .step-divider{
+    display:none;
+  }
+  @media (min-width: 861px){
+    .steps{align-items:start;}
+    .step:not(:last-child)::after{
+      content:"";
+      position:absolute;
+      top:23px; right:calc(-50% + 43px);
+      width:calc(100% - 66px);
+      border-top:2px dashed var(--line);
+    }
+  }
+  @media (max-width: 860px){
+    .steps{grid-template-columns:1fr; gap:34px;}
+  }
+
+  /* ---------- Contact ---------- */
+  .contact{
+    background:var(--paper-dim);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .contact-in{
+    display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center;
+  }
+  .contact h2{
+    font-size:clamp(24px, 3vw, 32px);
+    font-weight:800; color:var(--navy-deep);
+    margin-bottom:14px;
+  }
+  .contact p{color:var(--ink-soft); font-size:16px; max-width:40ch; margin-bottom:26px;}
+  .contact-actions{display:flex; flex-direction:column; gap:14px; max-width:340px;}
+  .contact-actions .btn{justify-content:center; width:100%; font-size:17px; padding:17px 26px;}
+  .phone-line{
+    display:flex; align-items:center; gap:10px;
+    margin-top:22px;
+    color:var(--navy-deep);
+    font-weight:700;
+    font-size:15px;
+  }
+  .phone-line b{font-family:'Cairo', sans-serif; font-size:19px;}
+
+  .contact-card{
+    background:var(--navy-deep);
+    border-radius:20px;
+    padding:34px;
+    color:#fff;
+  }
+  .contact-card .row{
+    display:flex; align-items:center; gap:14px;
+    padding:16px 0;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+  }
+  .contact-card .row:last-child{border-bottom:none;}
+  .contact-card .row .ic{
+    width:42px; height:42px; border-radius:10px;
+    background:rgba(255,255,255,0.08);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .contact-card .row .ic svg{width:21px; height:21px; color:var(--orange);}
+  .contact-card .row .txt small{display:block; color:#9AA6BC; font-size:13px; margin-bottom:2px;}
+  .contact-card .row .txt strong{font-size:16px; font-weight:700;}
+
+  @media (max-width: 860px){
+    .contact-in{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--navy-deep);
+    padding:28px 0 100px;
+    text-align:center;
+  }
+  footer p{color:#8B96AC; font-size:14px;}
+  footer .brand{justify-content:center; margin-bottom:10px;}
+
+  /* ---------- Floating action bar ---------- */
+  .fab-bar{
+    position:fixed; bottom:0; right:0; left:0;
+    z-index:60;
+    background:#fff;
+    border-top:1px solid var(--line);
+    box-shadow:0 -8px 24px -12px rgba(0,0,0,0.2);
+    display:flex;
+  }
+  .fab-bar a{
+    flex:1;
+    display:flex; align-items:center; justify-content:center; gap:9px;
+    padding:16px 10px;
+    font-weight:700;
+    font-size:15px;
+  }
+  .fab-bar a svg{width:20px; height:20px; flex-shrink:0;}
+  .fab-bar .fab-wa{background:var(--whatsapp); color:#fff;}
+  .fab-bar .fab-call{background:var(--orange); color:var(--navy-deep);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-in">
+    <div class="brand"><span class="mark">ح</span>شركة الحمد</div>
+    <a class="header-call" href="tel:+966541618130">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      054 161 8130
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-in">
+    <div>
+      <span class="hero-eyebrow">شراء الأجهزة الكهربائية المستعملة — الرياض</span>
+      <h1>نشتري ثلاجاتك ومكيفاتك وأجهزتك الكهربائية المستعملة</h1>
+      <p class="lead">تقييم فوري، دفع نقدي في المكان، واستلام من باب منزلك بدون أي تعب.</p>
+      <div class="badges">
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>أفضل الأسعار</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>دفع نقدي فوري</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>استلام من باب منزلك</span>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn btn-whatsapp" href="https://wa.me/966541618130?text=السلام%20عليكم%2C%20أرغب%20في%20بيع%20جهاز%20مستعمل" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2C6.478 2 2 6.478 2 12.004c0 1.858.5 3.6 1.373 5.104L2 22l4.998-1.35a9.94 9.94 0 0 0 5.006 1.354C17.53 22.004 22.008 17.53 22.008 12c0-5.526-4.478-10-10.004-10zm0 18.148a8.14 8.14 0 0 1-4.148-1.14l-.297-.176-2.964.8.79-2.887-.194-.297a8.15 8.15 0 0 1-1.256-4.444c0-4.51 3.67-8.18 8.18-8.18 4.51 0 8.18 3.67 8.18 8.18 0 4.51-3.67 8.144-8.29 8.144z"/></svg>
+          تواصل عبر واتساب
+        </a>
+        <a class="btn btn-call" href="tel:+966541618130">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          اتصل الآن
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-bottom-space"></div>
+</section>
+
+<section id="appliances">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">ما الذي نشتريه</span>
+      <h2>نستلم جميع أنواع الأجهزة الكهربائية المستعملة</h2>
+      <p>أي حالة، أي عمر، أي ماركة — أرسل لنا صورة الجهاز وسنقيّمه فورًا.</p>
+    </div>
+    <div class="appliances">
+      <div class="app-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="1.5"/><line x1="5" y1="10" x2="19" y2="10"/><line x1="8" y1="5" x2="8" y2="7"/><line x1="8" y1="13" x2="8" y2="15"/></svg></div>
+        <span>ثلاجات</span>
+      </div>
+      <div class="app-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="7" rx="1.5"/><path d="M6 13v2M18 13v2M9 13v3M15 13v3"/><path d="M2 9h20"/></svg></div>
+        <span>مكيفات</span>
+      </div>
+      <div class="app-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="5.5"/><circle cx="12" cy="13" r="2"/><line x1="7" y1="6" x2="9" y2="6"/></svg></div>
+        <span>غسالات</span>
+      </div>
+      <div class="app-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="1.5"/><rect x="5" y="8" width="10" height="8" rx="1"/><line x1="18" y1="9" x2="18" y2="9.01"/><line x1="18" y1="12" x2="18" y2="12.01"/><line x1="18" y1="15" x2="18" y2="15.01"/></svg></div>
+        <span>مايكروويف</span>
+      </div>
+      <div class="app-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="1.5"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <span>شاشات تلفزيون</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features-band">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">لماذا شركة الحمد</span>
+      <h2>تجربة بيع بسيطة من أولها لآخرها</h2>
+    </div>
+    <div class="features">
+      <div class="feat-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>أفضل الأسعار</h3>
+        <p>نقيّم جهازك بسعره الحقيقي في السوق، بدون مساومة أو تخفيض غير مبرر.</p>
+      </div>
+      <div class="feat-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 10v.01M18 14v.01"/></svg></div>
+        <h3>دفع نقدي فوري</h3>
+        <p>تستلم قيمة جهازك كاش في يدك مباشرة بعد الاتفاق، دون تأخير أو تحويل بنكي.</p>
+      </div>
+      <div class="feat-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"/></svg></div>
+        <h3>استلام من باب منزلك</h3>
+        <p>فريقنا وشاحنتنا يصلون إليك أينما كنت داخل الرياض وينقلون الجهاز بأنفسهم.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">كيف تبيع جهازك</span>
+      <h2>ثلاث خطوات وينتهي الأمر</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>تواصل معنا</h3>
+        <p>راسلنا على واتساب أو اتصل بنا وأرسل صورة للجهاز ونوعه.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>نحدد السعر</h3>
+        <p>نقيّم الجهاز ونخبرك بالسعر النهائي خلال دقائق.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>الاستلام والدفع</h3>
+        <p>نصل إلى باب منزلك، نستلم الجهاز، وندفع لك المبلغ نقدًا فورًا.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div>
+      <h2>جاهزون لاستلام جهازك اليوم</h2>
+      <p>تواصل معنا الآن عبر واتساب أو اتصال مباشر، ونرتب موعد الاستلام في نفس اليوم داخل الرياض.</p>
+      <div class="contact-actions">
+        <a class="btn btn-whatsapp" href="https://wa.me/966541618130?text=السلام%20عليكم%2C%20أرغب%20في%20بيع%20جهاز%20مستعمل" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2C6.478 2 2 6.478 2 12.004c0 1.858.5 3.6 1.373 5.104L2 22l4.998-1.35a9.94 9.94 0 0 0 5.006 1.354C17.53 22.004 22.008 17.53 22.008 12c0-5.526-4.478-10-10.004-10zm0 18.148a8.14 8.14 0 0 1-4.148-1.14l-.297-.176-2.964.8.79-2.887-.194-.297a8.15 8.15 0 0 1-1.256-4.444c0-4.51 3.67-8.18 8.18-8.18 4.51 0 8.18 3.67 8.18 8.18 0 4.51-3.67 8.144-8.29 8.144z"/></svg>
+          راسلنا على واتساب
+        </a>
+        <a class="btn btn-call" href="tel:+966541618130">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          اتصل بنا مباشرة
+        </a>
+      </div>
+      <div class="phone-line">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        نخدم مدينة الرياض وضواحيها
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="txt"><small>اتصال مباشر</small><strong>054 161 8130</strong></div>
+      </div>
+      <div class="row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="txt"><small>واتساب</small><strong>054 161 8130</strong></div>
+      </div>
+      <div class="row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="txt"><small>منطقة الخدمة</small><strong>الرياض وضواحيها</strong></div>
+      </div>
+      <div class="row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="txt"><small>أوقات الاستجابة</small><strong>يوميًا، رد فوري</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand" style="color:#fff;"><span class="mark">ح</span>شركة الحمد</div>
+    <p>شركة الحمد لشراء الأجهزة الكهربائية المستعملة — الرياض</p>
+  </div>
+</footer>
+
+<div class="fab-bar">
+  <a class="fab-wa" href="https://wa.me/966541618130?text=السلام%20عليكم%2C%20أرغب%20في%20بيع%20جهاز%20مستعمل" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2C6.478 2 2 6.478 2 12.004c0 1.858.5 3.6 1.373 5.104L2 22l4.998-1.35a9.94 9.94 0 0 0 5.006 1.354C17.53 22.004 22.008 17.53 22.008 12c0-5.526-4.478-10-10.004-10zm0 18.148a8.14 8.14 0 0 1-4.148-1.14l-.297-.176-2.964.8.79-2.887-.194-.297a8.15 8.15 0 0 1-1.256-4.444c0-4.51 3.67-8.18 8.18-8.18 4.51 0 8.18 3.67 8.18 8.18 0 4.51-3.67 8.144-8.29 8.144z"/></svg>
+    واتساب
+  </a>
+  <a class="fab-call" href="tel:+966541618130">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    اتصال
+  </a>
+</div>
+
+</body>
+</html>
